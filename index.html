@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./media/favicon.ico" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <title>Budget tracker</title>
+  </head>
+  <body>
+    <main>
+      <section class="m-5 gap-5 text-center">
+        <p class="title">Zeque's budget tracker</p>
+        <p class="subTitle">Easiest way to track your transactions!</p>
+      </section>
+
+      <section class="d-flex flex-wrap m-5 gap-5 justify-content-center">
+        <div class="cardBkg w-100">
+          <p class="pb-4 subTitle">Add transacions</p>
+          <form class="add">
+            <div class="form-floating mb-3">
+              <input
+                name="source"
+                type="input"
+                class="form-control"
+                id="floatingInput"
+                placeholder="transaction"
+              />
+              <label for="floatingInput">Source</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                name="amount"
+                type="number"
+                id="typeNumber"
+                class="form-control"
+                placeholder="0"
+              />
+              <label class="form-label" for="typeNumber">Amount</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-4">
+              Add transaction
+            </button>
+          </form>
+        </div>
+        <div class="cardBkg w-100">
+          <p class="pb-4 subTitle">Statistics</p>
+          <div class="statistics d-flex gap-4 justify-content-between">
+            <div class="card w-100">
+              <div class="card-header bg-success-subtle">Income</div>
+              <div class="income card-body">
+                $
+                <span id="income">0</span>
+              </div>
+            </div>
+            <div class="card w-100">
+              <div class="card-header bg-danger-subtle">Expense</div>
+              <div class="expense card-body">
+                $
+                <span id="expense">0</span>
+              </div>
+            </div>
+            <div class="card w-100">
+              <div class="card-header">Balance</div>
+              <div class="balance card-body">
+                $
+                <span id="balance">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="transaction-history d-flex-column m-5 gap-5 align-items-center"
+      >
+        <p class="py-2 text-center subTitle">Transaction history</p>
+        <div class="records d-flex flex-wrap gap-5 justify-content-center">
+          <div class="income cardBkg w-100">
+            <p class="pb-4 subTitle">Income</p>
+            <ul class="income-list list-group list-group-flush w-100"></ul>
+          </div>
+          <div class="expense cardBkg w-100">
+            <p class="pb-4 subTitle">Expense</p>
+            <ul
+              class="expense-list list-group list-group-flush w-100 pb-5"
+            ></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
